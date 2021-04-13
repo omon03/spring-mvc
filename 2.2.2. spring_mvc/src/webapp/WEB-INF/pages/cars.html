@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cars</title>
+</head>
+<body>
+    <table border="8px">
+        <tr>
+            <td>Car ID</td>
+            <td>Car Model</td>
+            <td>Car MaxSpeed</td>
+        </tr>
+        <tr th:each = "car : ${cars}">
+            <td th:text = "${car.getId()}"></td>
+            <td ><p th:text = "${car.getModel()}"></p> </td>
+            <td th:text = "${car.getMaxSpeed()}"></td>
+        </tr>
+    </table>
+</body>
+</html>
